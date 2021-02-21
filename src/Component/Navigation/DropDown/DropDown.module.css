@@ -1,0 +1,36 @@
+.DropDown {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    left: 0;
+    top: 0;
+    z-index: 80;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    text-align: center;
+}
+
+.DropDown p {
+    margin: 10px;
+}
+
+.DropDown a {
+    text-decoration: none;
+    color: #444;
+}
+
+@media (min-width: 550px) {
+    .DropDown {
+        display: none;
+    }
+}
+
+.Open {
+    transform: translateY(0);
+}
+
+.Close {
+    transform: translateY(-130%);
+}

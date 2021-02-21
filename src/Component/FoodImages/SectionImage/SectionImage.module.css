@@ -1,0 +1,32 @@
+.Container {
+    text-align: center;
+    width: 45%;
+} 
+
+.Crop {
+    position: relative;
+    overflow: hidden;  
+    height: 50vh; 
+} 
+
+.Image { 
+    position: absolute;
+    object-fit: cover;   
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+}
+
+.Name {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 10px
+}
+
+.Caption {
+    width: 60%;
+    margin-left: 20%;
+    font-size: 12px;
+}

@@ -1,0 +1,15 @@
+body {
+  font-family: "Lucida Grande", Tahoma;
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f1f1;
+  color: #444;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

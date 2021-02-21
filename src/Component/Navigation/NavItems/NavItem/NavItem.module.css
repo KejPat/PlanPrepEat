@@ -1,0 +1,27 @@
+.NavItem {
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    list-style: none;
+    padding-inline-start: 0px;
+    text-decoration: none;
+}
+
+.NavItem a:hover,
+.NavItem a:active,
+.NavItem .active {
+    color:#ffd6ba;
+}
+
+/* for desktop */
+@media (min-width: 550px) {
+    .NavItem {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
+        padding: 16px 20px;
+    }
+}

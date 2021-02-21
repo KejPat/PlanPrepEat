@@ -1,0 +1,44 @@
+.Container {
+    text-align: center;
+}
+
+.Title {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.Description {
+    position: relative;
+    font-size: 14px;
+    width: 65%;
+    margin-left: 17.5%;
+}
+
+.Image {
+    text-align: center;
+    width: 70%; 
+    margin: 20px;
+}
+
+.ListContainer {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.IngList {
+    list-style: none;    
+    padding-left: 20px;
+}
+
+.InsList {
+    grid-column: 2;
+    margin: 16px 20px 16px 20px
+}
+
+.IngItems {
+    margin: 20px 0 20px 0;
+}
+
+.InsItems {
+    margin: 20px 0 30px 0;
+}

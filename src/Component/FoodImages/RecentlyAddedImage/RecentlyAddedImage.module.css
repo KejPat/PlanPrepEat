@@ -1,0 +1,37 @@
+.Container {
+    position: relative;
+    width: 24%; 
+    height: 70vh; 
+    overflow: hidden;  
+}
+
+.Image {
+    position: absolute;
+    object-fit: cover;   
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+}
+
+.Text {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: .5s ease;
+    color: #444;
+}
+
+.Container:hover .Image{
+    opacity: 0.5;
+}
+
+.Container:hover .Text {
+    opacity: 1;
+}
+

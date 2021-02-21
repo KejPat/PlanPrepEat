@@ -1,0 +1,29 @@
+.NavBar {
+	text-transform: uppercase;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.NavBar a {
+    text-decoration: none;
+    color: #444;
+}
+
+@media(max-width: 550px) {
+    .NavBar nav,
+    .NavBar button{
+        display: none;
+    }
+}

@@ -1,0 +1,30 @@
+.Container {
+    position: relative;
+}
+
+.Image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 48px auto 20px auto;
+}
+
+.Text {
+    position: absolute;
+    text-align: center;
+    font-size: 28px;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: .5s ease;
+}
+
+.Container:hover .Image{
+    opacity: 0.5;
+}
+
+.Container:hover .Text {
+    opacity: 1;
+}

@@ -1,0 +1,33 @@
+.Category {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:28px;
+}
+
+.RecentlyAddedImages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Combine {
+    display: flex;
+    justify-content: space-between;
+    line-height: 32px;
+}
+
+.ViewMore {
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    vertical-align: bottom;
+    text-decoration: none;
+    color: #444;
+}
+
+.ViewMore:hover {
+    color:  #ffd6ba
+}
+
+.SectionImages {
+    display: flex;
+    justify-content: space-around;
+}

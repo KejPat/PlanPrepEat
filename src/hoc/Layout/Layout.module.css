@@ -1,0 +1,17 @@
+.Content {
+   margin: 5% 15% 5% 15%;
+}
+
+.Title {
+   font-family: Georgia, "Times New Roman", Times, serif;
+   font-size:60px;
+   text-align: center;
+   font-weight: normal;
+   margin-top: 100px;
+}
+
+@media(max-width: 1200px) {
+   .Content {
+      margin: 5% 5% 5% 5%;
+   }
+}
