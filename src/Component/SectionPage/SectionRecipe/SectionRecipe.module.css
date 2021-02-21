@@ -1,0 +1,25 @@
+.Container {
+    max-width: 30%;
+    text-align: center;
+}
+
+.Crop {
+    text-align: center;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.Image {
+    object-fit: cover;
+    height: 30vh;
+    width: 100%;
+    padding: 15px;
+}
+
+.Name {
+    width: 80%;
+    margin-left: 10%; 
+    font-size: 12px;
+    margin-top: 0px;
+}
+

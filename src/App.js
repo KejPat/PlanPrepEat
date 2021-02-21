@@ -13,8 +13,7 @@ function App() {
       <Layout>
         <Switch>
           <Route path="/newpost" component={NewPost} />
-          <Route path="/lunch" component={SectionPage} />
-          <Route path="/dinner/" component={SectionPage} />
+          <Route path={["/lunch", "/dinner"]} component={SectionPage} />
           <Route path="/recipe/:id" component={RecipePage} />
           <Route path="/" component={Homepage} />
         </Switch>

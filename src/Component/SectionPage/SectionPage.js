@@ -1,9 +1,36 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
-const SectionPage = () => {
+import SectionRecipe from './SectionRecipe/SectionRecipe';
+import classes from './SectionPage.module.css';
+
+const SectionPage = (props) => {
+    const [recipes, setRecipes] = useState([]);
+
+    // fetch recipes and render only when path changes
+    useEffect(() => {
+        const fetchRecipe = async () => {
+            await axios.get('http://localhost:5000' + props.location.pathname)
+                .then(response => {
+                    setRecipes(response.data)
+                    console.log(props.location.pathname)
+                })
+                .catch(error => console.log(error));
+        }
+        fetchRecipe();
+    }, [props.location.pathname])
+
+    const recipesList = recipes.map(recipe => {
+        return <SectionRecipe key={recipe._id} name={recipe.name} img={"http://localhost:5000/" + recipe.image} id={recipe._id} />
+    })
+
     return(
-        // TODO: Add sections
-        <p>Section Page</p>
+        <div>
+            <p>Lunch</p>
+            <div className={classes.RecipeList}>
+                {recipesList}
+            </div>
+        </div>     
     );
 };
 

@@ -1,0 +1,4 @@
+.RecipeList {
+    display: flex;
+    flex-direction: row;
+}

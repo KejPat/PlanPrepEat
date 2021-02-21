@@ -49,4 +49,18 @@ router.route('/recipe/:id').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 })
 
+// get all recipes with type lunch
+router.route('/lunch').get((req, res) => {
+    Recipe.find({recipeType: "Lunch"})
+        .then(recipes => res.json(recipes))
+        .catch(err => res.status(400).json('Error: ' + err));
+})
+
+// get all recipes with type lunch
+router.route('/dinner').get((req, res) => {
+    Recipe.find({recipeType: "Dinner"})
+        .then(recipes => res.json(recipes))
+        .catch(err => res.status(400).json('Error: ' + err));
+})
+
 module.exports = router;

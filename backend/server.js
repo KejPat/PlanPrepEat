@@ -13,7 +13,7 @@ app.use('/uploads', express.static('uploads'));
 // database uri, connection string, where database is stored which you get from the mongoDB dashboard
 const uri = process.env.ATLAS_URI;
 // connect to that uri. 
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
 // once connected log
 const connection = mongoose.connection;
