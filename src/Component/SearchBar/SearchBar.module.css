@@ -1,0 +1,15 @@
+.Container {
+    display: flex;
+    margin-top: 60px;
+    justify-content: flex-end;
+}
+
+.SearchBar {
+    margin-right: 10px;
+    padding: 6px;
+    width: 15%;
+}
+
+.Submit {
+    margin-right: 20px;
+}
