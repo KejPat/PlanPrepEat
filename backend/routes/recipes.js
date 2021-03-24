@@ -2,6 +2,7 @@ const router = require('express').Router();
 const multer = require('multer');
 let Recipe = require('../models/recipe.model');
 
+// create a place to store the recipe image
 const storage = multer.diskStorage({
     destination: function(req, file, callback) {
         callback(null, './uploads/');
@@ -28,6 +29,7 @@ router.route('/').get((req, res) => {
 
 // post new recipe
 router.post('/newpost', upload.single('image'), (req, res) => {
+    // make a new recipe 
     const newRecipe = new Recipe({
         name: req.body.name,
         recipeType: req.body.type,
@@ -37,6 +39,7 @@ router.post('/newpost', upload.single('image'), (req, res) => {
         instructions: JSON.parse(req.body.instructions)
     })
 
+    // save the recipe
     newRecipe.save()
         .then(() => res.json(newRecipe.id))
         .catch(err => res.status(400).json('Error: ' + err));
