@@ -6,6 +6,7 @@ import Homepage from './Component/Homepage/Hompage';
 import NewPost from './Component/NewPost/NewPost';
 import RecipePage from './Component/RecipePage/RecipePage';
 import SectionPage from './Component/SectionPage/SectionPage';
+import SearchResult from './Component/SearchResults/SearchResults';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/newpost" component={NewPost} />
           <Route path={["/lunch", "/dinner"]} component={SectionPage} />
           <Route path="/recipe/:id" component={RecipePage} />
+          <Route path="/search/:name" component={SearchResult} />
           <Route path="/" component={Homepage} />
         </Switch>
       </Layout>
