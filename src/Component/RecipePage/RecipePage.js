@@ -14,7 +14,6 @@ const RecipePage = (props) => {
         const fetchRecipe = async () => {
             await axios.get('http://localhost:5000/recipe/' + props.match.params.id)
                 .then(response => {
-                    console.log(response.data);
                     setName(response.data.name);
                     setDescription(response.data.description);
                     setUploadImage("http://localhost:5000/" + response.data.image);

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 
 import classes from './SearchBar.module.css';
 
@@ -9,10 +10,6 @@ const SearchBar = () => {
         setSearch(event.target.value)
     }
 
-    const searchRecipe = () => {
-        console.log(search);
-    }
-
     return (
         <div className={classes.Container}>
             <input 
@@ -21,10 +18,16 @@ const SearchBar = () => {
                 placeholder="Search Recipe"
                 value={search}
                 onChange={handleSearch} />
-            <button 
-                type="button" 
-                className={classes.Submit}
-                onClick={searchRecipe}>Search</button>
+            {/* only search if there is something to search */}
+           {search.length > 0 ?
+            <Link to={"/search/" + search} style={{textDecoration: "none", color: "#444"}}>
+                <button 
+                    type="button" 
+                    className={classes.Submit}>Search</button>
+            </Link> : 
+                <button 
+                    type="button" 
+                    className={classes.Submit}>Search</button>}
         </div>
     )
 }

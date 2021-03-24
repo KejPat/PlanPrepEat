@@ -46,7 +46,7 @@ const Homepage = () => {
         
     return (
         <Aux>
-             <p className={classes.Category}>Recently Added</p>
+            <p className={classes.Category}>Recently Added</p>
             <div className={classes.RecentlyAddedImages}>
                 {recentlyAddRecipes}
             </div>

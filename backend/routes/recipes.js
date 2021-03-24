@@ -66,4 +66,10 @@ router.route('/dinner').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 })
 
+router.route('/search/:name').get((req, res) => {
+    Recipe.find({$text: {$search: req.params.name}})
+        .then(recipes => res.json(recipes))
+        .catch(err => res.status(400).json('Error: ' + err));
+})
+
 module.exports = router;
