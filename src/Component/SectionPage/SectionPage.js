@@ -6,6 +6,7 @@ import classes from './SectionPage.module.css';
 
 const SectionPage = (props) => {
     const [recipes, setRecipes] = useState([]);
+    const [recipeType, setRecipeType] = useState("");
 
     // fetch recipes and render only when path changes
     useEffect(() => {
@@ -26,7 +27,9 @@ const SectionPage = (props) => {
 
     return(
         <div>
-            <p>Lunch</p>
+            {recipeType === "lunch" ? 
+                <p className={classes.heading}>Lunch Recipes</p> : 
+                <p className={classes.heading}>Dinner Recipes</p>}
             <div className={classes.RecipeList}>
                 {recipesList}
             </div>

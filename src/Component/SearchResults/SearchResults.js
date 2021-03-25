@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 import SectionRecipe from '../SectionPage/SectionRecipe/SectionRecipe';
+import classes from '../SearchResults/SearchResults.module.css';
 
 const SearchResult = (props) => {
     const [recipes, setRecipes] = useState([]);
@@ -22,8 +23,9 @@ const SearchResult = (props) => {
     })
 
     return(
-        <div>            
-            <div >
+        <div> 
+            <p>Searched: {props.match.params.name}</p>           
+            <div className={classes.RecipeList}>
                 {recipesList}
             </div>
         </div>     
